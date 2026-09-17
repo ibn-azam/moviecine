@@ -1,18 +1,10 @@
-
-
 const MovieDetailsModal = ({ movie, onClose }) => {
   if (!movie) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div
-        className="modal-content"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          className="close-button"
-          onClick={onClose}
-        >
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="close-button" onClick={onClose}>
           ×
         </button>
 
@@ -30,25 +22,20 @@ const MovieDetailsModal = ({ movie, onClose }) => {
           <h2>{movie.name}</h2>
 
           <p>
-            <strong>Rating:</strong>{" "}
-            {movie.rating?.average || "N/A"}
+            <strong>Rating:</strong> {movie.rating?.average || "N/A"}
           </p>
 
           <p>
-            <strong>Release Date:</strong>{" "}
-            {movie.premiered || "N/A"}
+            <strong>Release Date:</strong> {movie.premiered || "N/A"}
           </p>
 
           <p>
-            <strong>Language:</strong>{" "}
-            {movie.language || "N/A"}
+            <strong>Language:</strong> {movie.language || "N/A"}
           </p>
 
           <p>
             <strong>Genres:</strong>{" "}
-            {movie.genres?.length
-              ? movie.genres.join(", ")
-              : "N/A"}
+            {movie.genres?.length ? movie.genres.join(", ") : "N/A"}
           </p>
 
           <div className="summary">
@@ -67,8 +54,7 @@ const MovieDetailsModal = ({ movie, onClose }) => {
 
           {movie.network && (
             <p>
-              <strong>Network:</strong>{" "}
-              {movie.network.name}
+              <strong>Network:</strong> {movie.network.name}
             </p>
           )}
 
@@ -80,8 +66,7 @@ const MovieDetailsModal = ({ movie, onClose }) => {
 
           {movie.runtime && (
             <p>
-              <strong>Runtime:</strong>{" "}
-              {movie.runtime} minutes
+              <strong>Runtime:</strong> {movie.runtime} minutes
             </p>
           )}
         </div>

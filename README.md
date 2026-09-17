@@ -1,16 +1,113 @@
-# React + Vite
+# 🎬 MovieCine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieCine is a responsive movie and TV show discovery application built with **React** and **Vite**. It allows users to browse shows, search for movies or TV shows, and view detailed information through an interactive movie details modal.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Visit MovieCine](https://moviecine-79b170.netlify.app/)
 
-## React Compiler
+## 📂 Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[GitHub Repository](https://github.com/ibn-azam/moviecine)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* 🎬 Browse movies and TV shows
+* 🔎 Search for movies and shows dynamically
+* 🖼️ Display movie/show posters
+* ⭐ Display ratings
+* 📅 Display release/premiered dates
+* 📖 View detailed movie/show information
+* 🎭 Display genres and additional information
+* 🪟 Interactive movie details modal
+* ⚡ Fast development and build experience with Vite
+* 📱 Responsive user interface
+
+---
+
+## 🛠️ Technologies Used
+
+* **React**
+* **JavaScript**
+* **Vite**
+* **HTML5**
+* **CSS3**
+* **TVMaze API**
+
+---
+
+## 🔌 API
+
+MovieCine uses the [TVMaze API](https://www.tvmaze.com/api) to retrieve movie and TV show information.
+
+
+---
+
+## 📁 Project Structure
+
+```text
+moviecine/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.jsx
+│   │   ├── MovieCard.jsx
+│   │   └── MovieDetailsModal.jsx
+│   │
+│   ├── pages/
+│   │   └── Movies.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+
+
+
+
+
+## 🎯 Future Improvements
+
+Possible improvements for future versions include:
+
+* ❤️ Add favorite movies
+* 📌 Add watchlist functionality
+* 🔐 Add user authentication
+* 🎞️ Add movie trailers
+* 🔍 Add advanced filtering
+* 📄 Add pagination
+* 🌙 Add dark mode
+* 📱 Further improve mobile responsiveness
+* 🎥 Add dedicated movie/show detail pages
+* 💾 Persist favorites using local storage or a database
+
+---
+
+## 👨‍💻 Author
+
+**Md Afzal Khan Farhan**
+
+* GitHub: [@ibn-azam](https://github.com/ibn-azam)
+
+---
+
+## 📄 License
+
+This project is created for learning and demonstration purposes.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!

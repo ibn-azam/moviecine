@@ -44,8 +44,7 @@ export default function Footer() {
             </span>
           </a>
           <p className="max-w-xs text-sm leading-relaxed text-[#9a958c]">
-            Search, sort and save movies and shows across every major
-            platform.
+            Search, sort and save movies and shows across every major platform.
           </p>
         </div>
 

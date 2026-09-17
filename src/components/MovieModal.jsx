@@ -40,7 +40,10 @@ const MovieModal = ({ movie, onClose }) => {
             <p className="text-sm font-medium uppercase tracking-widest text-[#e8d5a3]">
               Show details
             </p>
-            <h2 id="movie-dialog-title" className="mt-2 text-2xl font-bold text-[#f5f2ea]">
+            <h2
+              id="movie-dialog-title"
+              className="mt-2 text-2xl font-bold text-[#f5f2ea]"
+            >
               {movie.name}
             </h2>
             <div className="mt-4 flex flex-wrap gap-2 text-xs text-[#9a958c]">

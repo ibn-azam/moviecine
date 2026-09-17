@@ -22,17 +22,19 @@ const FEATURED = [
   },
 ];
 
+const FEATURED_MOVIE = FEATURED[0];
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0f0f10]">
       {/* Background backdrop */}
       <div className="absolute inset-0">
         <img
-          src="https://picsum.photos/seed/movieexplorer-backdrop/1920/1080"
+          src={FEATURED_MOVIE.poster}
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="h-full w-full object-cover"
+          className="h-full w-full scale-110 object-cover object-center blur-[2px]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f10]/70 via-[#0f0f10]/90 to-[#0f0f10]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f10] via-[#0f0f10]/40 to-transparent" />
@@ -52,19 +54,17 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="flex flex-col md:w-1/2"
         >
-          <span className="text-sm font-medium text-[#e8d5a3]">
-            Thousands of titles, one home
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#e8d5a3]">
+            Featured film · {FEATURED_MOVIE.genre} · ★ {FEATURED_MOVIE.rating}
           </span>
 
           <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight text-[#f5f2ea] sm:text-5xl lg:text-6xl">
-            Find your next
-            <br />
-            favorite film.
+            {FEATURED_MOVIE.title}
           </h1>
 
           <p className="mt-6 max-w-md text-base leading-relaxed text-[#9a958c] sm:text-lg">
-            Search, sort and save movies and shows across every major
-            platform. Build a watchlist that actually fits your taste.
+            Search, sort and save movies and shows across every major platform.
+            Build a watchlist that actually fits your taste.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -108,7 +108,11 @@ export default function Hero() {
                 key={movie.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 + i * 0.12, ease: "easeOut" }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.15 + i * 0.12,
+                  ease: "easeOut",
+                }}
                 className={`group relative aspect-[2/3] overflow-hidden rounded-xl border border-[#2a2825] bg-gradient-to-br from-[#1a1a18] to-[#0f0f10] ${
                   i === 1 ? "translate-y-6 sm:translate-y-8" : ""
                 }`}

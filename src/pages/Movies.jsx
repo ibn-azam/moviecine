@@ -16,9 +16,7 @@ const Movies = () => {
       setError("");
 
       const url = query.trim()
-        ? `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(
-            query
-          )}`
+        ? `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(query)}`
         : "https://api.tvmaze.com/shows";
 
       const response = await fetch(url);
@@ -35,7 +33,7 @@ const Movies = () => {
         setMovies(
           data.map((show) => ({
             show,
-          }))
+          })),
         );
       }
     } catch (err) {
@@ -100,7 +98,8 @@ const Movies = () => {
                 Find something worth watching.
               </h1>
               <p className="mt-4 max-w-lg text-base leading-relaxed text-[#9a958c]">
-                Browse popular series, discover hidden favorites, and build your next great night in.
+                Browse popular series, discover hidden favorites, and build your
+                next great night in.
               </p>
             </div>
             <SearchBar
@@ -115,9 +114,15 @@ const Movies = () => {
       <main className="mx-auto max-w-6xl px-6 py-10 sm:px-8 sm:py-14">
         <div className="mb-7 flex items-center justify-between gap-4">
           <div>
-            <h2 className="text-xl font-semibold">{searchQuery ? `Results for “${searchQuery}”` : "Popular right now"}</h2>
+            <h2 className="text-xl font-semibold">
+              {searchQuery
+                ? `Results for “${searchQuery}”`
+                : "Popular right now"}
+            </h2>
             {!loading && !error && movies.length > 0 && (
-              <p className="mt-1 text-sm text-[#7a756c]">{movies.length} titles to explore</p>
+              <p className="mt-1 text-sm text-[#7a756c]">
+                {movies.length} titles to explore
+              </p>
             )}
           </div>
           <span className="hidden rounded-full border border-[#3a3835] px-3 py-1 text-xs text-[#9a958c] sm:inline-flex">
@@ -128,7 +133,10 @@ const Movies = () => {
         {loading && (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {Array.from({ length: 10 }, (_, index) => (
-              <div key={index} className="animate-pulse overflow-hidden rounded-xl border border-[#2a2825] bg-[#171615]">
+              <div
+                key={index}
+                className="animate-pulse overflow-hidden rounded-xl border border-[#2a2825] bg-[#171615]"
+              >
                 <div className="aspect-[2/3] bg-[#24221f]" />
                 <div className="space-y-3 p-4">
                   <div className="h-4 rounded bg-[#2a2825]" />
@@ -142,9 +150,15 @@ const Movies = () => {
 
         {error && (
           <div className="rounded-xl border border-red-900/60 bg-red-950/20 px-6 py-10 text-center">
-            <p className="font-medium text-red-200">We couldn’t load the collection.</p>
+            <p className="font-medium text-red-200">
+              We couldn’t load the collection.
+            </p>
             <p className="mt-2 text-sm text-red-300/70">{error}</p>
-            <button type="button" onClick={() => fetchMovies(searchQuery)} className="mt-5 rounded-lg bg-[#e8d5a3] px-4 py-2 text-sm font-semibold text-[#0f0f10]">
+            <button
+              type="button"
+              onClick={() => fetchMovies(searchQuery)}
+              className="mt-5 rounded-lg bg-[#e8d5a3] px-4 py-2 text-sm font-semibold text-[#0f0f10]"
+            >
               Try again
             </button>
           </div>
@@ -153,7 +167,9 @@ const Movies = () => {
         {!loading && !error && movies.length === 0 && (
           <div className="rounded-xl border border-dashed border-[#3a3835] px-6 py-16 text-center">
             <p className="text-lg font-medium">No titles found</p>
-            <p className="mt-2 text-sm text-[#9a958c]">Try a different search term.</p>
+            <p className="mt-2 text-sm text-[#9a958c]">
+              Try a different search term.
+            </p>
           </div>
         )}
 

@@ -1,14 +1,12 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import './index.css'
+import "./index.css";
 import Movies from "./pages/Movies";
 import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
 import MainLayout from "./layouts/MainLayout";
 
 function App() {
-
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -16,7 +14,7 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "/movies",
@@ -26,14 +24,11 @@ function App() {
           path: "/watchlist",
           element: <Watchlist />,
         },
-      ]
+      ],
     },
-
   ]);
 
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
